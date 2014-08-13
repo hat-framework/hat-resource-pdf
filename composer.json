@@ -20,7 +20,7 @@
     },
     "autoload": {
         "psr-0": {
-            "resource\pdf\\": "src/"
+            "resource\\pdf\\": "src/"
         }
     }
 }
