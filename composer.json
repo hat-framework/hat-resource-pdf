@@ -1,9 +1,9 @@
 {
-    "name": "hatframework/resources/pdf",
+    "name": "hatframework/hat-resource-pdf",
     "type": "library",
     "description": "",
     "keywords": [],
-    "homepage": "https://github.com/hat-framework/resources/pdf",
+    "homepage": "https://github.com/hat-framework/hat-resource-pdf",
     "license": "MIT",
     "authors": [
         {
