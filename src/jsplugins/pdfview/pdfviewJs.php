@@ -24,5 +24,3 @@ class pdfviewJs extends JsPlugin{
           </object>";
     }
 }
-
-?>
