@@ -43,7 +43,7 @@ class pdfResource extends \classes\Interfaces\resource{
         
         $this->LoadResourceFile("classes/config.php"); 
         $class = pdf_gerador_default . "Gerador";
-        $this->LoadResourceFile("lib/geradores/".pdf_gerador_default."/$class.php");
+        $this->LoadResourceFile("lib/geradores/$class.php");
         $this->pdf = call_user_func("$class::getInstanceOf");
     }
     
@@ -56,6 +56,10 @@ class pdfResource extends \classes\Interfaces\resource{
         
     }
     
+    public function setPropriety($propriety, $value){
+        $this->pdf->setPropriety($propriety, $value);
+        return $this;
+    }
     
     public function save($html, $filename, $dir=""){
         
@@ -64,5 +68,3 @@ class pdfResource extends \classes\Interfaces\resource{
     }
     
 }
-
-?>

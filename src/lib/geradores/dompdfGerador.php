@@ -43,9 +43,20 @@ class dompdfGerador extends classes\Classes\Object {
         }
     }
     
+    private $propriety = array();
+    public function setPropriety($propriety, $value){
+        if(!method_exists($this->dompdf, $propriety)){return;}
+        $this->propriety[$propriety] = $value;
+    }
+    
     public function pdfSaveToServer($html, $filename, $dir="", $orientation = 'portrait'){
+        
         $this->dompdf->load_html($html);
         $this->dompdf->set_paper('letter', $orientation);
+        foreach($this->propriety as $name => $value){
+            if(!method_exists($this->dompdf, $name)){continue;}
+            $this->dompdf->$name($customPaper);
+        }
         $this->dompdf->render();
         
     	//configs do seu DOMPDF….
