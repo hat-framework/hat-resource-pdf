@@ -55,7 +55,7 @@ class dompdfGerador extends classes\Classes\Object {
         $this->dompdf->set_paper('letter', $orientation);
         foreach($this->propriety as $name => $value){
             if(!method_exists($this->dompdf, $name)){continue;}
-            $this->dompdf->$name($customPaper);
+            $this->dompdf->$name($value);
         }
         $this->dompdf->render();
         
